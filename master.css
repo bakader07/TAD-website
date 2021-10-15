@@ -108,10 +108,16 @@ button {
     padding: 10px 20px;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: var(--text-color);
+    color: var(--bg-color);
 }
 button:hover {
     cursor: pointer;
     box-shadow: 0 0 5px var(--tad-color);
+}
+
+#inscrire {
+    background-color: var(--tad-color);
 }
 
 .img-container {
