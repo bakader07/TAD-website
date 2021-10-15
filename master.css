@@ -1,0 +1,143 @@
+:root {
+    font-family: 'Lato', sans-serif;
+    --section-padding: 60px;
+    --tad-color: #2AA088;
+
+    --light-bg: white;
+    --light-text: #111;
+
+    --dark-bg: #222;
+    --dark-text: #999;
+
+    --bg-color: var(--light-bg);
+    --text-color: var(--light-text);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo > img {
+    height: 80px;
+}
+
+.logo > h1 {
+    font-size: 36px;
+    color: var(--tad-color);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 10px;
+    list-style: none;
+}
+
+.menu > li {
+    text-align: center;
+    padding: 5px;
+    flex-grow: 1;
+}
+.menu > li:hover {
+    cursor: pointer;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--light-text);
+}
+
+.menu > li:hover, .menu a:hover {
+    color: var(--tad-color);
+}
+
+.landing-page {
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-image: url(/dddd.png);
+    background-position: center;
+    background-size: cover;
+    color: var(--light-bg);
+    text-align: center;
+    padding: 40px;
+    text-shadow: 0 0 5px var(--tad-color), 0 0 10px var(--light-bg);
+}
+
+.inscription {
+    padding: var(--section-padding) 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 767px) {
+    .inscription{
+        grid-template-columns: 1fr;
+    }
+}
+
+.info-container {
+    padding: 40px 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--tad-color);
+}
+
+.img-container {
+    display: grid;
+    place-items: center;
+}
+
+.img-container > img {
+    height: 40vw;
+    object-fit: cover;
+    transition: transform 2s ease;
+}
+.img-container:hover > img {
+    transform: rotateY(360deg);
+}
+
+
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    color: var(--bg-color);
+    background-color: var(--text-color);
+    font-weight: 700;
+}
